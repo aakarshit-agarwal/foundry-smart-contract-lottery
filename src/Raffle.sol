@@ -85,6 +85,10 @@ contract Raffle is VRFConsumerBaseV2, AutomationCompatibleInterface {
         return i_entranceFee;
     }
 
+    function getRaffleState() public view returns (RaffleState) {
+        return s_raffleState;
+    }
+
     /** Other Functions */
     function checkUpkeep(
         bytes memory /* checkData */
